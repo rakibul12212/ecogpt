@@ -1,7 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import Sidebar from "@/components/shared/Sidebar";
 
 export const metadata = {
   title: "EchoGPT",
@@ -12,9 +12,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="flex">
+          <div className="w-1/5">
+            <Sidebar />
+          </div>
+          <div className="w-4/5">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );
