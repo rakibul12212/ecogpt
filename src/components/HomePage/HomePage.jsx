@@ -1,12 +1,12 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import About from "./About";
+import Chatbox from "./Chatbox";
 
 const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <About />
+      <Chatbox />
     </div>
   );
 };
