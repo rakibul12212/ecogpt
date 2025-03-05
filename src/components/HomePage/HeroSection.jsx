@@ -37,7 +37,7 @@ const FeatureCard = ({ title, description }) => (
 const HeroSection = () => {
   return (
     <Container>
-      <div className="mx-24 h-[200px] overflow-y-auto">
+      <div className="mx-24 md:h-[200px] 2xl:h-[500px] overflow-y-auto mt-5 md:mt-2 2xl:mt-20">
         <div className="flex flex-col justify-center items-center text-center gap-y-4">
           <Image
             src={assets.images.logo}

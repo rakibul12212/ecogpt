@@ -65,7 +65,7 @@ const Chatbox = () => {
   return (
     <Container className="mt-10">
       {/* Header Section */}
-      <div className="mx-auto border border-gray-300 p-4 rounded-xl max-w-3xl w-full bg-white shadow-md">
+      <div className="mx-auto border border-gray-300 p-4 rounded-xl lg:max-w-3xl 2xl:max-w-5xl bg-white shadow-md">
         <div className="flex items-center justify-between">
           {/* Left Side */}
           <div className="flex items-center gap-x-4">
