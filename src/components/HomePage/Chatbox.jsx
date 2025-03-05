@@ -2,14 +2,10 @@
 import { useState, useRef, useEffect } from "react";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { SiAnthropic, SiXiaomi, SiDeepin } from "react-icons/si";
-import {
-  FaChevronDown,
-  FaPaperclip,
-  FaMicrophone,
-  FaPaperPlane,
-} from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { IoMdAddCircleOutline, IoMdTime } from "react-icons/io";
 import Container from "../shared/Container/Container";
+import InnerChatbox from "./InnerChatbox";
 
 const Chatbox = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +60,7 @@ const Chatbox = () => {
     setIsOpen(false); // Close dropdown after selection
   };
 
-  const [message, setMessage] = useState("");
+  //   const [message, setMessage] = useState("");
 
   return (
     <Container className="mt-10">
@@ -122,33 +118,8 @@ const Chatbox = () => {
             <IoMdAddCircleOutline className="text-gray-500 hover:text-gray-700 text-lg" />
             <IoMdTime className="text-gray-500 hover:text-gray-700 text-lg" />
           </div>
-        </div>
-
-        {/* Chat Input Box */}
-        <div className="border border-gray-300 p-3 mt-4 rounded-xl w-full bg-white flex items-center">
-          {/* Attachment Icon */}
-          <button className="text-gray-500 hover:text-gray-700 mb-20">
-            <FaPaperclip className="text-xl" />
-          </button>
-
-          {/* Input Field - Bigger Height */}
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Ask a question..."
-            className="flex-1 mx-3 outline-none bg-transparent text-gray-700 text-base resize-none min-h-[100px] max-h-[200px] w-full overflow-hidden scrollbar-none"
-          />
-
-          {/* Right Icons */}
-          <div className="flex items-center gap-3 mb-20">
-            <button className="text-gray-500 hover:text-gray-700">
-              <FaMicrophone className="text-xl" />
-            </button>
-            <button className="text-gray-500 hover:text-gray-700">
-              <FaPaperPlane className="text-xl" />
-            </button>
-          </div>
-        </div>
+        </div>{" "}
+        <InnerChatbox />
       </div>
     </Container>
   );
