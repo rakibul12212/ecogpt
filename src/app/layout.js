@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="flex ">
-          <div className="w-1/5 h-screen bg-red-100">
+          <div className="w-1/5 h-screen bg-[#F7F5FF]">
             <Sidebar />
           </div>
           <div className="w-4/5">

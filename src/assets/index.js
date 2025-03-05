@@ -1,6 +1,7 @@
 const assets = {
   images: {
-    logo: "/logo/logo.webp", // Image is in the public folder at /logo/logo.webp
+    logo: "/logo/logo.webp",
+    user: "/user/user.webp",
   },
 };
 
