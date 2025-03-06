@@ -21,8 +21,6 @@ const Sidebar = () => {
 
   return (
     <Container>
-      
-
       {/* Sidebar Toggle Button for Mobile */}
       <button
         className="p-3 md:hidden fixed top-4 left-4 z-50 bg-gray-800 text-white rounded"
@@ -33,11 +31,40 @@ const Sidebar = () => {
 
       {/* Sidebar Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 md:w-64 bg-white shadow-lg transition-transform duration-300 ease-in-out z-40 
+        className={`fixed top-0 left-0 h-full w-64 md:w-64 2xl:w-96 bg-[#F7F5FF] shadow-lg transition-transform duration-300 ease-in-out z-40 
         ${isOpen ? "translate-x-0" : "-translate-x-64"} md:translate-x-0`}
       >
         <nav className="mt-5 space-y-2 px-4">
-          <button className="w-full bg-[#E9D8FD] text-[#713CF4] py-3 rounded-lg font-medium">
+          <Link href="/">
+            {/* Sidebar Header (Logo and EchoGPT Title) */}
+            <div className="flex md:flex-col-2 2xl:flex-col-2 gap-x-4 py-2">
+              {assets.images.logo && (
+                <Image
+                  src={assets.images.logo}
+                  width={50}
+                  height={50}
+                  alt="logo"
+                />
+              )}
+              <div className="relative text-center">
+                <h1 className="font-bold text-2xl tracking-wide text-[#713CF4]">
+                  EchoGPT
+                </h1>
+                <h1
+                  className="absolute font-bold text-2xl tracking-wide left-0 right-0 top-[0.9em] scale-y-[-1] opacity-30"
+                  style={{
+                    maskImage:
+                      "linear-gradient(to bottom, rgba(100, 80, 244, 0.5), transparent)",
+                    WebkitMaskImage:
+                      "linear-gradient(to top, rgba(100, 80, 244, 0.5), transparent)",
+                  }}
+                >
+                  EchoGPT
+                </h1>
+              </div>
+            </div>
+          </Link>
+          <button className="w-full bg-[#E9D8FD] text-[#713CF4] mt-10 py-3 rounded-lg font-medium">
             ✏️ New Chat
           </button>
           <ul className="mt-4 space-y-2">

@@ -6,9 +6,9 @@ const Navbar = () => {
   return (
     <div className="bg-[#FAFAFA] py-2">
       <Container>
-        <div className=" flex items-center justify-between">
-          {/* Sidebar Header (Logo and EchoGPT Title) */}
-          <div className="flex md:flex-col-2 2xl:flex-col-2 gap-x-4 py-2">
+        <div className=" flex items-center justify-between md:justify-end 2xl:justify-end">
+          {/* logo */}
+          <div className="flex md:flex-col-2 2xl:flex-col-2 gap-x-4 py-2 md:hidden">
             {assets.images.logo && (
               <Image
                 src={assets.images.logo}
