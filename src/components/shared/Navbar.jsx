@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <div className="bg-[#FAFAFA] py-2">
       <Container>
-        <div className="flex items-center justify-end ">
+        <div className="flex items-center justify-between md:justify-end 2xl:justify-end gap-x-10 ">
           {/* Logo (Visible on Mobile Only) */}
-          <div className="flex gap-x-4 py-2 md:hidden">
+          <div className="flex  gap-x-4 py-2 md:hidden">
             {assets.images.logo && (
               <Image
                 src={assets.images.logo}
@@ -20,7 +20,7 @@ const Navbar = () => {
                 alt="logo"
               />
             )}
-            <div className="relative text-center">
+            <div className="relative text-center ">
               <h1 className="font-bold text-2xl tracking-wide text-[#713CF4]">
                 EchoGPT
               </h1>

@@ -1,3 +1,4 @@
+import Sidebar from "@/components/shared/Container/Sidebar";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 
@@ -10,8 +11,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        <div className="flex">
+          {/* Sidebar: Takes 1/3 width on laptops, 1/4 on desktops */}
+          <div >
+            <Sidebar />
+          </div>
+
+          {/* Main Content: Takes remaining space */}
+          <div className="flex-1">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
