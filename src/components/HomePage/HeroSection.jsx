@@ -28,17 +28,18 @@ const features = [
 ];
 
 const FeatureCard = ({ title, description }) => (
-  <div className="border border-gray-200 rounded-md p-4">
+  <div className="border border-gray-200 rounded-md p-4 bg-white shadow-md">
     <p className="font-bold text-sm text-gray-700">{title}</p>
-    <p className="text-sm mt-2">{description}</p>
+    <p className="text-sm mt-2 text-gray-600">{description}</p>
   </div>
 );
 
 const HeroSection = () => {
   return (
     <Container>
-      <div className="mx-24 md:h-[200px] 2xl:h-[500px] overflow-y-auto mt-5 md:mt-2 2xl:mt-16">
-        <div className="flex flex-col justify-center items-center text-center gap-y-4">
+      <div className="mx-4 sm:mx-8 md:mx-56 h-[300px] md:h-[200px] 2xl:h-[500px] overflow-y-auto mt-5 md:mt-2 2xl:mt-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white/90 sm:via-transparent sm:to-white opacity-90"></div>
+        <div className="flex flex-col justify-center items-center text-center gap-y-4 relative z-10">
           <Image
             src={assets.images.logo}
             width={50}
@@ -46,15 +47,17 @@ const HeroSection = () => {
             alt="logo"
             className="rounded-full"
           />
-          <p className="text-2xl md:text-3xl font-semibold">EchoGPT</p>
-          <p className="text-base md:text-lg">
+          <p className="text-xl sm:text-2xl md:text-3xl font-semibold">
+            EchoGPT
+          </p>
+          <p className="text-sm sm:text-base md:text-lg">
             Interact with EchoGPT, an AI that reflects your input
             <br className="hidden md:block" />
             for quick ideas, summaries, or feedback. Perfect for
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 relative z-10">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
