@@ -1,14 +1,17 @@
+"use client"; // Ensures state works in Next.js App Router
+
 import React from "react";
 import Image from "next/image";
 import assets from "@/assets";
 import Container from "./Container/Container";
+
 const Navbar = () => {
   return (
     <div className="bg-[#FAFAFA] py-2">
       <Container>
-        <div className=" flex items-center justify-between md:justify-end 2xl:justify-end">
-          {/* logo */}
-          <div className="flex md:flex-col-2 2xl:flex-col-2 gap-x-4 py-2 md:hidden">
+        <div className="flex items-center justify-end ">
+          {/* Logo (Visible on Mobile Only) */}
+          <div className="flex gap-x-4 py-2 md:hidden">
             {assets.images.logo && (
               <Image
                 src={assets.images.logo}
@@ -34,6 +37,8 @@ const Navbar = () => {
               </h1>
             </div>
           </div>
+
+          {/* User Profile Image */}
           <Image
             src={assets.images.user}
             width={50}
