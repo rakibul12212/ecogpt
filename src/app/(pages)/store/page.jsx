@@ -97,7 +97,7 @@ const Page = () => {
             name="search"
             id="search"
             placeholder="Search chat history..."
-            className="border border-gray-300 p-3 pl-10 rounded-xl w-full bg-white text-gray-700 outline-none focus:ring-2 focus:ring-blue-400"
+            className="border border-gray-300 p-3 pl-10 rounded-xl w-full bg-white text-gray-700 outline-none "
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
