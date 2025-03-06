@@ -12,12 +12,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="flex">
-          {/* Sidebar: Takes 1/3 width on laptops, 1/4 on desktops */}
-          <div >
+          <div>
             <Sidebar />
           </div>
 
-          {/* Main Content: Takes remaining space */}
           <div className="flex-1">
             <Navbar />
             {children}

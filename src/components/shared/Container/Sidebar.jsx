@@ -7,7 +7,7 @@ import { FaHome, FaStore, FaCog, FaSun, FaHistory, FaTh } from "react-icons/fa";
 
 export default function Sidebar() {
   return (
-    <div className="bg-white shadow-lg h-screen p-4 flex flex-col w-64 ">
+    <div className="bg-white shadow-lg h-screen fixed p-4 flex flex-col w-64 ">
       {/* Logo (Visible on Mobile Only) */}
       <Link href="/">
         <div className="flex  gap-x-4 py-2 pb-8 ">
@@ -33,32 +33,58 @@ export default function Sidebar() {
         </div>
       </Link>
 
-      <button className="w-full bg-purple-500 text-white py-2 rounded-md mb-4">
-        New Chat
-      </button>
+      <div className="h-[300px] md:h-[200px] 2xl:h-[500px] overflow-y-auto">
+        <button className="w-full bg-purple-500 text-white py-2 rounded-md mb-4 ">
+          New Chat
+        </button>
 
-      <div className="flex flex-col gap-3">
-        <Link
-          href="/history"
-          className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
-        >
-          <FaHistory className="w-5 h-5" /> History
-        </Link>
-        <Link
-          href="/store"
-          className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
-        >
-          <FaStore className="w-5 h-5" /> Store
-        </Link>
-        <Link
-          href="/aitask"
-          className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
-        >
-          <FaTh className="w-5 h-5" /> AI Tasks
-        </Link>
+        <div className="flex flex-col gap-3 ">
+          <Link
+            href="/history"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaHistory className="w-5 h-5" /> History
+          </Link>
+          <Link
+            href="/store"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaStore className="w-5 h-5" /> Store
+          </Link>
+          <Link
+            href="/aitask"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaTh className="w-5 h-5" /> AI Tasks
+          </Link>
+          <Link
+            href="/support"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaTh className="w-5 h-5" /> Support
+          </Link>
+          <Link
+            href="/subscription"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaTh className="w-5 h-5" /> Subscriptions
+          </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaTh className="w-5 h-5" /> API Platform
+          </Link>
+          <Link
+            href="#"
+            className="flex items-center gap-3 p-2 rounded-md hover:bg-purple-100"
+          >
+            <FaTh className="w-5 h-5" /> discord
+          </Link>
+        </div>
       </div>
 
-      <div className="mt-auto bg-gray-100 p-4 rounded-md">
+      <div className="mt-auto bg-gray-100 p-4 rounded-md ">
         <h2 className="text-sm font-semibold">Unlock Pro Features</h2>
         <p className="text-xs text-gray-600 mb-2">
           With statistics on your shot & profile performance available to Pros
@@ -71,6 +97,7 @@ export default function Sidebar() {
       <div className="flex justify-between mt-4 p-2 border-t">
         <FaHome className="w-6 h-6 text-gray-500" />
         <FaCog className="w-6 h-6 text-gray-500" />
+        <FaSun className="w-6 h-6 text-gray-500" />
         <FaSun className="w-6 h-6 text-gray-500" />
       </div>
     </div>

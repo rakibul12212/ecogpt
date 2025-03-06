@@ -7,7 +7,7 @@ import Container from "./Container/Container";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#FAFAFA] py-2">
+    <div className="bg-[#FAFAFA] py-2 z-10 ">
       <Container>
         <div className="flex items-center justify-between md:justify-end 2xl:justify-end gap-x-10 ">
           {/* Logo (Visible on Mobile Only) */}
