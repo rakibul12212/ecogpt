@@ -6,7 +6,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <div className="bg-[#FAFAFA] py-2 z-10 flex items-center justify-between md:justify-end 2xl:justify-end px-4 md:px-10">
+    <div className="bg-[#FAFAFA] sticky top-0 py-2 z-10 flex items-center justify-between md:justify-end 2xl:justify-end px-4 md:px-10">
       <div className="flex items-center gap-x-4 md:hidden">
         {/* Ensure the button is centered */}
         <button

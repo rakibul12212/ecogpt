@@ -16,7 +16,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-[#F7F5FF]  h-screen fixed p-2 flex flex-col w-78 md:w-64">
+    <div className="bg-[#F7F5FF]  h-screen fixed p-2 flex flex-col w-78 md:w-64 sticky top-0">
       {/* Logo (Visible on Mobile Only) */}
       <Link href="/" className="block sm:block ">
         <div className="flex gap-x-4 py-2 pb-8">
