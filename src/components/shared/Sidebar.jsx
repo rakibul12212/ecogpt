@@ -12,7 +12,7 @@ import { BiDiamond } from "react-icons/bi";
 import { GiCubeforce } from "react-icons/gi";
 import { LiaShareAltSolid } from "react-icons/lia";
 
-export default function Sidebar() {
+const Sidebar = () => {
   const pathname = usePathname();
 
   return (
@@ -137,4 +137,5 @@ export default function Sidebar() {
       </div>
     </div>
   );
-}
+};
+export default Sidebar;

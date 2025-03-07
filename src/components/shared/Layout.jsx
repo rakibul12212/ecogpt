@@ -4,7 +4,7 @@ import Sidebar from "@/components/shared/Sidebar";
 import Navbar from "@/components/shared/Navbar";
 import { FiX } from "react-icons/fi";
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -33,4 +33,5 @@ export default function Layout({ children }) {
       </div>
     </div>
   );
-}
+};
+export default Layout;
