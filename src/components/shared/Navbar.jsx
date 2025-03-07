@@ -9,7 +9,6 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
     <div className="bg-[#FAFAFA] sticky top-0 py-2 z-10 flex items-center justify-between md:justify-end 2xl:justify-end px-4 md:px-10">
       <div className="flex items-center gap-x-4 md:hidden">
-        {/* Ensure the button is centered */}
         <button
           onClick={toggleSidebar}
           className="text-2xl text-[#713CF4] flex items-center border-1 p-1 rounded-md"
@@ -17,7 +16,6 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
           {isSidebarOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        {/* Center the logo and text */}
         <Link href="/">
           <div className="flex items-center gap-x-4">
             {assets.images.logo && (
@@ -49,7 +47,6 @@ const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
         </Link>
       </div>
 
-      {/* Ensure the user image is centered */}
       <Image
         src={assets.images.user}
         width={40}
