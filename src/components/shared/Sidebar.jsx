@@ -18,7 +18,7 @@ export default function Sidebar() {
   return (
     <div className="bg-[#F7F5FF] shadow-lg h-screen fixed p-4 flex flex-col w-64">
       {/* Logo (Visible on Mobile Only) */}
-      <Link href="/">
+      <Link href="/" className="block sm:block ">
         <div className="flex gap-x-4 py-2 pb-8">
           {assets.images.logo && (
             <Image src={assets.images.logo} width={50} height={50} alt="logo" />
@@ -41,7 +41,7 @@ export default function Sidebar() {
           </div>
         </div>
       </Link>
-
+      ;
       <div className="h-[300px] md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
         <div className="flex flex-col">
           <Link href="/">
@@ -120,7 +120,6 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
-
       <div className="mt-auto bg-gray-100 p-2 rounded-md">
         <h2 className="text-sm font-semibold">Unlock Pro Features</h2>
         <p className="text-xs text-gray-600 mb-2">
@@ -130,7 +129,6 @@ export default function Sidebar() {
           Upgrade to Pro
         </button>
       </div>
-
       <div className="flex justify-between mt-4 p-2 border-t">
         <FaHome className="w-6 h-6 text-gray-500" />
         <LiaShareAltSolid className="w-6 h-6 text-gray-500" />

@@ -63,7 +63,7 @@ const Chatbox = () => {
   //   const [message, setMessage] = useState("");
 
   return (
-    <Container className="mt-10 ps-28">
+    <Container className="mt-10 ps-0 md:ps-28 2xl:ps-28">
       {/* Header Section */}
       <div className="mx-auto border border-gray-300 p-4 rounded-xl lg:max-w-2xl 2xl:max-w-4xl bg-white shadow-md">
         <div className="flex items-center justify-between">

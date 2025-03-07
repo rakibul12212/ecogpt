@@ -80,7 +80,7 @@ const Page = () => {
   }, []);
 
   return (
-    <Container className="ps-28">
+    <Container className="ps-0 md:ps-28 2xl:ps-28">
       <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="p-4 ">
           <div className="text-center mb-6">
