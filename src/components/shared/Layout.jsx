@@ -18,20 +18,24 @@ const Layout = ({ children }) => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:block flex flex-col items-center justify-start w-full`}
       >
+        {/* Close Button (Mobile) */}
         <div className="absolute top-4 right-2 md:hidden">
-          <button onClick={toggleSidebar} className="text-2xl text-gray-600">
+          <button onClick={closeSidebar} className="text-2xl text-gray-600">
             <FiX />
           </button>
         </div>
+
+        {/* Sidebar Component (Pass closeSidebar) */}
         <Sidebar closeSidebar={closeSidebar} />
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col w-full ">
+      <div className="flex-1 flex flex-col w-full">
         <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
         <main className="w-full flex-1">{children}</main>
       </div>
     </div>
   );
 };
+
 export default Layout;
