@@ -81,7 +81,7 @@ const Page = () => {
 
   return (
     <Container className="ps-5 ">
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className=" min-h-screen px-4 sm:px-6 lg:px-8 z-10">
         <div className="p-4 ">
           <div className="text-center mb-6">
             <p className="text-2xl md:text-3xl 2xl:text-4xl font-semibold text-center py-8">
