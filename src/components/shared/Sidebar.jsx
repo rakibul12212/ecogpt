@@ -16,7 +16,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="bg-[#F7F5FF] shadow-lg h-screen fixed p-4 flex flex-col w-64">
+    <div className="bg-[#F7F5FF]  h-screen fixed p-4 flex flex-col w-64">
       {/* Logo (Visible on Mobile Only) */}
       <Link href="/" className="block sm:block ">
         <div className="flex gap-x-4 py-2 pb-8">
@@ -42,7 +42,7 @@ export default function Sidebar() {
         </div>
       </Link>
       ;
-      <div className="h-[300px] md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
+      <div className="h-full md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
         <div className="flex flex-col">
           <Link href="/">
             <button className="w-full text-[#cf79e5] border-1  py-2 rounded-md mb-4 flex items-center justify-center gap-x-2">

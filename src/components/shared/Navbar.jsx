@@ -6,12 +6,12 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <div className="bg-red-500 py-2 z-10 flex items-center justify-between px-4 md:px-10">
+    <div className="bg-[#FAFAFA] py-2 z-10 flex items-center justify-between md:justify-end 2xl:justify-end px-4 md:px-10">
       <div className="flex items-center gap-x-4 md:hidden">
         {/* Ensure the button is centered */}
         <button
           onClick={toggleSidebar}
-          className="text-2xl text-[#713CF4] flex items-center"
+          className="text-2xl text-[#713CF4] flex items-center border-1 p-1 rounded-md"
         >
           {isSidebarOpen ? <FiX /> : <FiMenu />}
         </button>
