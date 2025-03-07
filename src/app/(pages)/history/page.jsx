@@ -42,17 +42,17 @@ const Page = () => {
   };
 
   return (
-    <Container className="ps-5 ">
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 ">
-        <p className="text-2xl md:text-3xl 2xl:text-4xl font-semibold text-center">
+    <Container className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center min-h-screen w-full">
+        <p className="text-2xl md:text-3xl 2xl:text-4xl font-semibold text-center w-full">
           My Chat History
         </p>
-        <p className=" text-center text:md md:text-xl 2xl:text-2xl max-w-2xl py-4">
+        <p className="text-center text-md md:text-xl 2xl:text-2xl max-w-4xl py-4 w-full">
           Access your complete chat history across diverse topics and
           interactions with different models or characters.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full max-w-2xl">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full">
           <div className="relative w-full">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
             <input
@@ -94,12 +94,12 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between border border-gray-500 px-4 py-3 gap-4 rounded-xl mt-10 w-full max-w-2xl">
+        <div className="flex flex-col sm:flex-row items-center justify-between border border-gray-500 px-4 py-3 gap-4 rounded-xl mt-10 w-full">
           <div className="flex flex-col items-center">
             <Image src={assets.images.logo} width={30} height={30} alt="logo" />
             <p className="text-xs">EchoGPT</p>
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left w-full">
             <p className="text-gray-800 font-lg">dfg</p>
             <p className="text-sm text-gray-600">
               <span className="font-bold">Last Updated:</span> Mar 5, 2025 5:15

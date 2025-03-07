@@ -84,14 +84,15 @@ const Page = () => {
       <div className=" min-h-screen px-4 sm:px-6 lg:px-8 z-10">
         <div className="p-4 ">
           <div className="text-center mb-6">
-            <p className="text-2xl md:text-3xl 2xl:text-4xl font-semibold text-center py-8">
+            <p className="text-2xl md:text-3xl 2xl:text-6xl font-semibold py-8">
               EchoGPT Store
             </p>
-            <p className=" text-center text:md md:text-xl 2xl:text-2xl max-w-2xl py-4">
+            <p className="text-md md:text-xl 2xl:text-2xl max-w-2xl mx-auto py-4">
               Discover and create custom versions of ChatGPT that combine
               instructions, extra knowledge, and any combination of skills.
             </p>
           </div>
+
           <div className="relative w-full py-8">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
             <input

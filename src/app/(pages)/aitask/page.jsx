@@ -99,18 +99,21 @@ const Page = () => {
   }, [selectedCategory, cards]);
 
   return (
-    <Container className="ps-5 ">
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
-        <div className="p-4 ">
-          <div className="text-center mb-6">
-            <p className="text-2xl md:text-3xl 2xl:text-4xl font-semibold text-center py-8">
-              EchoGPT Store
+    <Container className="w-full">
+      <div className="flex flex-col items-center justify-center w-full min-h-screen px-4 sm:px-6 lg:px-8">
+        <div className="w-full p-4">
+          {/* Header Section */}
+          <div className="text-center mb-6 w-full">
+            <p className="text-2xl md:text-3xl 2xl:text-6xl font-semibold py-8">
+              EchoGPT AI Tasks
             </p>
-            <p className=" text-center text:md md:text-xl 2xl:text-2xl max-w-2xl py-4">
+            <p className="text-md md:text-xl 2xl:text-2xl max-w-none py-4">
               Discover and create custom versions of ChatGPT that combine
               instructions, extra knowledge, and any combination of skills.
             </p>
           </div>
+
+          {/* Search Bar */}
           <div className="relative w-full py-8">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600" />
             <input
@@ -118,19 +121,20 @@ const Page = () => {
               name="search"
               id="search"
               placeholder="Search chat history..."
-              className="border border-gray-300 p-3 pl-10 rounded-xl w-full bg-white text-gray-700 outline-none "
+              className="border border-gray-300 p-3 pl-10 rounded-xl w-full bg-white text-gray-700 outline-none"
             />
           </div>
+
           {/* Filter Section */}
-          <div className="flex gap-4 justify-start mb-8 border-b-1 border-gray-300">
+          <div className="flex gap-4 justify-start mb-8 border-b border-gray-300">
             {["All", "Chat", "Image", "Data"].map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`relative px-4 py-2 text-gray-700 transition-all border-b-2 ${
                   selectedCategory === category
-                    ? "border-purple-500 "
-                    : "border-transparent hover:border-purple-500 "
+                    ? "border-purple-500"
+                    : "border-transparent hover:border-purple-500"
                 }`}
               >
                 {category}
@@ -138,21 +142,20 @@ const Page = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {/* Cards Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
             {filteredCards.map((card) => (
               <div
                 key={card.id}
-                className="p-4 rounded-2xl border border-gray-200 bg-white"
+                className="p-4 rounded-2xl border border-gray-200 bg-white w-full"
               >
-                <div className="flex items-center justify-between ">
+                <div className="flex items-center justify-between">
                   {card.icon}
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900 mt-2">
                   {card.title}
                 </h2>
-                <p className="text-gray-500 mt-1 max-w-[200px]">
-                  {card.description}
-                </p>
+                <p className="text-gray-500 mt-1">{card.description}</p>
               </div>
             ))}
           </div>
