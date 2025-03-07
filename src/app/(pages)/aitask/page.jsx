@@ -122,16 +122,16 @@ const Page = () => {
             />
           </div>
           {/* Filter Section */}
-          <div className="flex gap-4 justify-baseline py-4 ">
+          <div className="flex gap-4 justify-start mb-8 border-b-1 border-gray-300">
             {["All", "Chat", "Image", "Data"].map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 ${
+                className={`relative px-4 py-2 text-gray-700 transition-all border-b-2 ${
                   selectedCategory === category
-                    ? "bg-blue-500 text-white"
-                    : "bg-white text-gray-700 border-b-2 border-gray-300"
-                } hover:bg-blue-500 hover:text-white transition-all`}
+                    ? "border-purple-500 "
+                    : "border-transparent hover:border-purple-500 "
+                }`}
               >
                 {category}
               </button>

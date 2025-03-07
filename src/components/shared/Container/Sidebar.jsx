@@ -96,12 +96,12 @@ export default function Sidebar() {
               label: "Subscriptions",
             },
             {
-              href: "/",
+              href: "#",
               icon: <GiCubeforce className="w-5 h-5" />,
               label: "API Platform",
             },
             {
-              href: "/",
+              href: "#",
               icon: <BsDiscord className="w-5 h-5" />,
               label: "Discord",
             },
