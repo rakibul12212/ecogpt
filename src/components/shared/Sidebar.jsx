@@ -41,8 +41,8 @@ export default function Sidebar() {
           </div>
         </div>
       </Link>
-      ;
-      <div className="h-full md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
+
+      <div className="h-[300px] md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
         <div className="flex flex-col">
           <Link href="/">
             <button className="w-full text-[#cf79e5] border-1  py-2 rounded-md mb-4 flex items-center justify-center gap-x-2">

@@ -18,7 +18,7 @@ export default function Layout({ children }) {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:block flex flex-col items-center justify-start w-full`}
       >
-        <div className="absolute top-4 right-4 md:hidden">
+        <div className="absolute top-4 right-2 md:hidden">
           <button onClick={toggleSidebar} className="text-2xl text-gray-600">
             <FiX />
           </button>

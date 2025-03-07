@@ -37,7 +37,7 @@ const FeatureCard = ({ title, description }) => (
 const HeroSection = () => {
   return (
     <Container className="ps-5 md:ps-28 2xl:ps-28">
-      <div className="lg:max-w-2xl 2xl:max-w-4xl mx-4 sm:mx-8 md:mx-56 h-[300px] md:h-[200px] 2xl:h-[500px] overflow-y-auto mt-5 md:mt-2 2xl:mt-16 relative z-10">
+      <div className="lg:max-w-2xl 2xl:max-w-4xl mx-4 sm:mx-8 md:mx-60 h-[300px] md:h-[200px] 2xl:h-[500px] overflow-y-auto mt-5 md:mt-2 2xl:mt-16 relative z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white/90 sm:via-transparent sm:to-white opacity-90"></div>
         <div className="flex flex-col justify-center items-center text-center gap-y-4 relative z-10">
           <Image
