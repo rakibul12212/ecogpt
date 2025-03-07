@@ -42,10 +42,10 @@ export default function Sidebar() {
         </div>
       </Link>
 
-      <div className="h-[300px] md:h-[300px] 2xl:h-[600px] overflow-y-auto">
+      <div className="h-[300px] md:h-[300px] 2xl:h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-gray-200 pr-10">
         <div className="flex flex-col">
           <Link href="/">
-            <button className="w-full text-[#8c8c8c] border-1  py-2 rounded-md mb-4 flex items-center justify-center gap-x-2">
+            <button className="w-full text-[#cf79e5] border-1  py-2 rounded-md mb-4 flex items-center justify-center gap-x-2">
               <FiEdit /> <span>New Chat</span>
             </button>
           </Link>
@@ -111,7 +111,7 @@ export default function Sidebar() {
               href={href}
               className={`flex items-center gap-3 p-2 rounded-md ${
                 pathname === href
-                  ? "bg-purple-300 text-white"
+                  ? "bg-gray-500 text-white"
                   : "hover:bg-purple-100"
               }`}
             >
