@@ -1,4 +1,4 @@
-// ✅ Server Component (app/layout.js)
+
 import "./globals.css";
 import Layout from "@/components/shared/Layout";
 
