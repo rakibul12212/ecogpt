@@ -24,3 +24,17 @@ This is a Next.js project using the latest versions of Next.js and React.
 ## Deploy on Vercel
 
 - https://ecogpt.vercel.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
