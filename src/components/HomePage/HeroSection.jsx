@@ -94,8 +94,10 @@ const HeroSection = () => {
         body: JSON.stringify({ messages: newMessages }),
       });
 
+      let errorData;
       if (!response.ok) {
-        throw new Error("Failed to fetch response");
+        errorData = await response.json();
+        throw new Error(errorData.details || "Failed to fetch response");
       }
 
       const data = await response.json();
@@ -104,6 +106,13 @@ const HeroSection = () => {
       saveChatToLocal(finalMessages, currentSessionId);
     } catch (error) {
       console.error("Error generating response:", error);
+      const errorMessage = { 
+        role: "assistant", 
+        content: `Oops! The AI failed to respond.\n\nError Details: ${error.message}\n\nPlease make sure your OpenAI API key is correct and that you have available credits on your OpenAI account.`
+      };
+      const finalMessages = [...newMessages, errorMessage];
+      setMessages(finalMessages);
+      saveChatToLocal(finalMessages, currentSessionId);
     } finally {
       setIsLoading(false);
     }

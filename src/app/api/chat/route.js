@@ -39,7 +39,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("OpenAI API error:", error);
     return NextResponse.json(
-      { error: "Failed to fetch response from AI" },
+      { error: "Failed to fetch response from AI", details: error.message },
       { status: 500 }
     );
   }
